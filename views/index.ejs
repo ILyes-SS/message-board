@@ -11,6 +11,7 @@
             <li><%=  message.user  %>  </li>  
             <li><%=  message.text  %>  </li>  
             <li><%=  message.added.toISOString()  %>  </li>  
+            <a href="<%="/message/"+ message.text %>"> link </a>
         </div>
     <%} )  %>
 </body>

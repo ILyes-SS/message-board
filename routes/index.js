@@ -30,6 +30,16 @@ router.get('/new', (req, res, next)=>{
     })
 })
 
+router.get('/message/:text', (req, res, next)=>{
+    const filtered = messages.filter((msg)=> msg.text == req.params.text)
+    res.render('index.ejs',{
+        title: 'message board',
+        messages: filtered
+    })
+
+
+})
+
 router.post('/new', (req, res, next)=>{
     const author = req.body.author
     const message = req.body.message
